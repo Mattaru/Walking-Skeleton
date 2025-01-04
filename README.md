@@ -1,0 +1,1 @@
+Skeleton for a DENO+HONO+SVELT+PSQL+FLYWAY+PLAYWRIGHT projects.
