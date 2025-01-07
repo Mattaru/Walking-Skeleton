@@ -4,23 +4,30 @@
 ##### ```db``` - PSQL+FLYWAY
 ##### ```e2e-tests``` - PLAYWRIGHTS.
 ### Working process:
-1. For run whole project iin a docker container:
+1. For run whole project in a docker container:
 ``` bash
+# Build container
 docker compose up --build -d
 ```
-If you wanna stop it:
 ``` bash
+# Stop container
 docker compose stop
 ```
-2. For work only with the client locally go to the client folder:
+2. For work only with the client locally:
 ``` bash
+# Go to the client folder
 cd client
 ```
-then we should install the dependencies:
 ``` bash
+# Install the dependencies
 deno install --allow-scripts
 ```
-and run the client:
 ``` bash
+# Run the client
 deno run dev --open
+```
+### e2e tests:
+For run playwright test:
+``` bash
+docker compose run --rm --entrypoint=npx e2e-tests playwright test
 ```
