@@ -29,5 +29,14 @@ deno run dev --open
 ### e2e tests:
 For run playwright test:
 ``` bash
+# Up the docker container
+docker compose up --build -d
+```
+``` bash
+# Run the tests
 docker compose run --rm --entrypoint=npx e2e-tests playwright test
+```
+``` bash
+# Stop the docker container
+docker compose stop
 ```
